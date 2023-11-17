@@ -1,0 +1,61 @@
+.sidebarContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 30vw;
+}
+.header{
+    padding: 1rem;
+    margin-top: 10px;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.btn-container>button{
+    width: 80%;
+    height: 7vh;
+    border: none;
+    border-radius: 3rem;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    cursor: pointer;
+}
+.btn-container>button:hover {
+    transform: translateY(-1.5px); 
+    transition: all 100ms;
+}
+.adder{
+    font-size: 1.8rem;
+}
+
+.pc-notes-title-area{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.popup-pc-container{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(39, 39, 39, 0.621);
+    z-index: 10;
+}
