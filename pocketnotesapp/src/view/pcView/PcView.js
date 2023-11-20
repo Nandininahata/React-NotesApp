@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import '../pcView/PcView.css'
-import NotesPc from '../../components/pcSide/notes-pc/NotesPc';
-import HomePc from '../../components/pcSide/home-pc/HomePc';
-import SidebarPc from '../../components/pcSide/sidebar-pc/SidebarPc';
+import NotesDesktop from '../../components/desktopSide/desktop-Notes/NotesDesktop';
+import HomeDesktop from '../../components/desktopSide/desktop-Home/HomeDesktop';
+import SidebarDesktop from '../../components/desktopSide/desktop-Sidebar/SidebarDesktop';
 
 function PcView(){
     const [selected, setSelected] = useState("");
@@ -10,11 +10,11 @@ function PcView(){
 
     return(
         <div className='Home'>
-            <SidebarPc selected={selected} setSelected={setSelected} />
+            <SidebarDesktop selected={selected} setSelected={setSelected} />
             {selected.length > 0 ? (
-                <NotesPc notes={notes} setNotes={setNotes} selected={selected} setSelected={setSelected} />
+                <NotesDesktop notes={notes} setNotes={setNotes} selected={selected} setSelected={setSelected} />
               ) : (
-                <HomePc/>
+                <HomeDesktop/>
               )}
         </div>
     )

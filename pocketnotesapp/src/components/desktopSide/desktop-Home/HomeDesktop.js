@@ -1,9 +1,9 @@
 import React from 'react'
-import '../home-pc/HomePc.css'
+import '../desktop-Home/HomeDesktop.css'
 import banner from '../../../images/homebg.png'
 import lock from '../../../images/lock.png'
 
-function HomePc(){
+function HomeDesktop(){
     return(
         <div className='homecontainer'>
             <img className='bnimg' src={banner} alt='bannerimage'/>
@@ -18,4 +18,4 @@ function HomePc(){
     )
 }
 
-export default HomePc;
+export default HomeDesktop;

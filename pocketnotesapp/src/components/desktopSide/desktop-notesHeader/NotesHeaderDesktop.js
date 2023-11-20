@@ -1,7 +1,7 @@
 import React from 'react';
-import '../notesHeader-pc/NotesHeaderPc.css'
+import '../desktop-notesHeader/NotesHeaderDesktop.css'
  
-function NotesHeaderPc({title, selected, setSelected}){
+function NotesHeaderDesktop({title, selected, setSelected}){
     const nameInitials=title[0].name
     .split(" ")
     .map((word)=> word.charAt(0))
@@ -29,4 +29,4 @@ function NotesHeaderPc({title, selected, setSelected}){
     )
 }
 
-export default NotesHeaderPc;
+export default NotesHeaderDesktop;

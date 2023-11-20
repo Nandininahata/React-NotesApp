@@ -1,9 +1,9 @@
 import React from 'react';
-import '../notesContent-pc/NotesContentPc.css'
+import '../desktop-notesContent/NotesContentDesktop.css'
 
-function NotesContentPc({note}){
+function NotesContentDesktop({note}){
     return(
-        <div className='pc-notes-content-container'>
+        <div className='desktop-notes-content-container'>
             <div className='notes-time-details'>
                 <p className='note-time'>{note.time}</p>
                 <p className='note-date'>{note.date}</p>    
@@ -15,4 +15,4 @@ function NotesContentPc({note}){
     )
 }
 
-export default NotesContentPc;
+export default NotesContentDesktop;

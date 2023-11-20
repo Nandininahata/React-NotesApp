@@ -1,12 +1,12 @@
 import React from 'react'
 import { useEffect, useState, useRef } from 'react';
-import '../sidebar-pc/SidebarPc.css'
-import PopupPc from '../popup-pc/PopupPc';
-import NotesHeaderPc from '../notesHeader-pc/NotesHeaderPc';
+import '../desktop-Sidebar/SidebarDesktop.css'
+import PopupDesktop from '../desktop-Popup/PopupDesktop';
+import NotesHeaderDesktop from '../desktop-notesHeader/NotesHeaderDesktop';
 
-function SidebarPc({selected, setSelected}){
+function SidebarDesktop({selected, setSelected}){
     const[titles, setTitles]=useState([]);
-    const[gNamesHead, setGNamesHead]=useState(
+    const[ghead, setGhead]=useState(
         localStorage.getItem('groupNames') || []
     );
     const[showPopup, setShowPopup]=useState(false);
@@ -15,18 +15,18 @@ function SidebarPc({selected, setSelected}){
     useEffect((e)=>{
         const data = localStorage.getItem('groupNames')
         if(data){
-            setGNamesHead(JSON.parse(data));
+            setGhead(JSON.parse(data));
         }else{
-            setGNamesHead([]);
+            setGhead([]);
         }
     },[]);
     useEffect(()=>{
-        if(gNamesHead.length>0){
+        if(ghead.length>0){
             const obj = JSON.parse(localStorage.getItem('groupNames'));
             const result = Object.keys(obj).map((key)=>[obj[key]]);
             setTitles(result);
         }
-    }, [gNamesHead]);
+    }, [ghead]);
 
     const handleClick=()=> {
         setShowPopup(!showPopup);
@@ -55,9 +55,9 @@ function SidebarPc({selected, setSelected}){
                         <p>Create Notes group</p>
                 </button>
             </div>
-            <div className='pc-notes-title-area'>
+            <div className='desktop-notes-title-area'>
             {titles.length >0 &&titles.map((title,index)=>(
-                <NotesHeaderPc
+                <NotesHeaderDesktop
                 selected={selected}
                 setSelected={setSelected}
                 key={index} 
@@ -66,11 +66,11 @@ function SidebarPc({selected, setSelected}){
             ))}
             </div>
             {showPopup &&(
-                <div className='popup-pc-container'>
+                <div className='popup-desktop-container'>
                 <div className='popup-here' ref={popupRef}>
-                <PopupPc
-                gNamesHead={gNamesHead}
-                setGNamesHead={setGNamesHead}
+                <PopupDesktop
+                ghead={ghead}
+                setGhead={setGhead}
                 onClose={handleClose}
                 />
                 </div>
@@ -79,4 +79,4 @@ function SidebarPc({selected, setSelected}){
     );
 }
 
-export default SidebarPc;
+export default SidebarDesktop;

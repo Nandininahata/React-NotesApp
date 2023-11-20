@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import '../notes-pc/NotesPc.css'
+import '../desktop-Notes/NotesDesktop.css'
 import enter from '../../../images/enter.png'
-import NotesContentPc from '../notesContent-pc/NotesContentPc';
+import NotesContentDesktop from '../notesContent-pc/NotesContentDesktop';
 
-function NotesPc({notes, setNotes, selected, setSelected}){
+function NotesDesktop({notes, setNotes, selected, setSelected}){
     const [text, setText]=useState("");
     const [bgroundColor,setBgroundColor]=useState("#fff");
     const [initials,setInitials]=useState("");
@@ -95,7 +95,7 @@ function NotesPc({notes, setNotes, selected, setSelected}){
             <div className='notes-content'>
                 {notes && notes.length>0 ?
                 notes.map((note,index)=>(
-                    <NotesContentPc key={index} note={note}/>
+                    <NotesContentDesktop key={index} note={note}/>
                 )):null}
             </div>
             <div className='notes-input-area'>
@@ -110,4 +110,4 @@ function NotesPc({notes, setNotes, selected, setSelected}){
     )
 }
 
-export default NotesPc;
+export default NotesDesktop;

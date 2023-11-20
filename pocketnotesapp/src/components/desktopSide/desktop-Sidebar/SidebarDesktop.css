@@ -40,7 +40,7 @@
     font-size: 1.8rem;
 }
 
-.pc-notes-title-area{
+.desktop-notes-title-area{
     overflow-x: hidden;
     overflow-y: scroll;
     max-height: 100%;
@@ -50,7 +50,7 @@
 ::-webkit-scrollbar{
     display: none;
 }
-.popup-pc-container{
+.popup-desktop-container{
     position: fixed;
     left: 0;
     top: 0;
