@@ -1,7 +1,7 @@
 import React from 'react'
 import '../home-pc/HomePc.css'
-import banner from '../../../assets/main-background.png'
-import lock from '../../../assets/lock.png'
+import banner from '../../../images/homebg.png'
+import lock from '../../../images/lock.png'
 
 function HomePc(){
     return(

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../notes-pc/NotesPc.css'
-import enter from '../../../assets/enter.png'
+import enter from '../../../images/enter.png'
 import NotesContentPc from '../notesContent-pc/NotesContentPc';
 
 function NotesPc({notes, setNotes, selected, setSelected}){

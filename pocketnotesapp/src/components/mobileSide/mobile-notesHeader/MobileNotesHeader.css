@@ -1,11 +1,11 @@
 
-.mob-group-logo-title{
+.mobile-group-logo-title{
     display: flex;
     width: 100vw;
     height: 70px;
     align-items: center;
 }
-.mob-logo-title{
+.mobile-logo-title{
     display: flex;
     margin-left: 2vw;
     height: 60px;
@@ -17,7 +17,7 @@
     color: white;
     margin-left: 10vw;
 }
-.mob-group-title{
+.mobile-group-title{
     font-size: 18px;
     margin-left: 4vw;
     font-weight: 500;

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;900&family=Roboto:wght@500&display=swap');
 
-.mob-popup-container{
+.mobile-popup-container{
     font-family:'Roboto', sans-serif;
     height: 15rem;
     width: 75vw;
@@ -16,17 +16,17 @@
     border-radius: 7px;
     padding: 20px;
 }
-.mob-popup-heading{
+.mobile-popup-heading{
     font-size: 3.5vw;
     font-weight: 100;
 }
-.mob-name-input-area{
+.mobile-name-input-area{
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
 }
-.mob-name-input-area>input{
+.mobile-name-input-area>input{
     border-style: solid;
     width: 60%;
     height: 30px;
@@ -35,29 +35,29 @@
     border-color: #CCCCCC;
     border-radius: 13px;
 }
-.mob-name-input-area>input::placeholder{
+.mobile-name-input-area>input::placeholder{
     font-size: 11px;
     color: #CCCCCC;
 } 
 
-.mob-color-input-area{
+.mobile-color-input-area{
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
-.mob-color-container{
+.mobile-color-container{
     margin-right: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 2.3vw;
     align-items: center;
 }
-.mob-color-input-1,
-.mob-color-input-2,
-.mob-color-input-3,
-.mob-color-input-4,
-.mob-color-input-5,
-.mob-color-input-6{
+.mobile-color-input-1,
+.mobile-color-input-2,
+.mobile-color-input-3,
+.mobile-color-input-4,
+.mobile-color-input-5,
+.mobile-color-input-6{
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -65,22 +65,22 @@
     cursor: pointer;
     background-color: black;
 }
-.mob-color-input-1{
+.mobile-color-input-1{
     background-color: #B38BFA;
 }
-.mob-color-input-2{
+.mobile-color-input-2{
     background-color: #FF79F2;
 }
-.mob-color-input-3{
+.mobile-color-input-3{
     background-color: #43E6FC;
 }
-.mob-color-input-4{
+.mobile-color-input-4{
     background-color: #F19576;
 }
-.mob-color-input-5{
+.mobile-color-input-5{
     background-color: #0047FF;
 }
-.mob-color-input-6{
+.mobile-color-input-6{
     background-color: #6691FF;
 }
 .highlight{
@@ -88,7 +88,7 @@
     border-radius: 50px;
 }
 
-.mob-create-btn>button{
+.mobile-create-btn>button{
     background-color: black;
     color: white;
     border-style: solid;
@@ -100,11 +100,11 @@
     border-radius: 7px;
     cursor: pointer;
 }
-.mob-create-btn>button:hover{
+.mobile-create-btn>button:hover{
     background-color: rgb(166, 166, 166);
     color: black;
 }
-.mob-close-btn{
+.mobile-close-btn{
     position: absolute;
     top: 5%;
     right: 4%;

@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;900&family=Roboto:wght@500&display=swap');
 
-.home-mob-container{
+.home-mobile-container{
     display: flex;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
     font-family:'Roboto', sans-serif;
 }
-.home-mob-heading{
+.home-mobile-heading{
     font-size: 11vw;
     padding: 1rem;
     margin-top: 15px;
     letter-spacing: 2px;
     font-weight: 500;
 }
-.mob-btn-container{
+.mobile-btn-container{
     display: flex;
     width: 100vw;
     align-items: center;
     justify-content: center;
 }
-.mob-btn-container>button{
+.mobile-btn-container>button{
     display: flex;
     align-items: center;
     height: 5vh;
@@ -36,15 +36,15 @@
     letter-spacing: .1rem;
     cursor: pointer;
 }
-.mob-btn-container .adder{
+.mobile-btn-container .adder{
     font-size: 7vw;
 }
-.mob-btn-container:hover{
+.mobile-btn-container:hover{
     transform: translateY(-1.5px); 
     transition: all 100ms;
 }
 
-.popup-mob-container{
+.mobile-Popup-container{
     position: fixed;
     left: 0;
     top: 0;

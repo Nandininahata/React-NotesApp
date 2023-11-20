@@ -1,8 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import '../notesHeader-mob/NotesHeaderMob.css'
+import '../mobile-notesHeader/MobileNotesHeader.css'
 
-function NotesHeaderMob({title, selected, setSelected}){
+function MobileNotesHeader({title, selected, setSelected}){
     const navigate=useNavigate();
     const nameInitials=title[0].name
     .split(" ")
@@ -22,11 +22,11 @@ function NotesHeaderMob({title, selected, setSelected}){
             setSelected(title[0].name)
             navigate('/notesPage')    
         }} 
-        className={`mob-group-logo-title ${selected === title[0].name ? `mob-highlighted-title` : null}`}>
-            <div className='mob-logo-title' style={{backgroundColor: title[0].color}}>
+        className={`mobile-group-logo-title ${selected === title[0].name ? `mobile-highlighted-title` : null}`}>
+            <div className='mobile-logo-title' style={{backgroundColor: title[0].color}}>
             {nameInitials}
             </div>
-            <div className='mob-group-title'>
+            <div className='mobile-group-title'>
             {newHeading}
             </div>
         </div>
@@ -34,4 +34,4 @@ function NotesHeaderMob({title, selected, setSelected}){
     )
 }
 
-export default NotesHeaderMob;
+export default MobileNotesHeader;

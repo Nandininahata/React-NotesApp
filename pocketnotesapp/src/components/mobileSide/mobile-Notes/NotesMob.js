@@ -1,14 +1,14 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
-import enter from '../../../assets/enter.png'
-import back from '../../../assets/back.png'
+import enter from '../../../images/enter.png'
+import back from '../../../images/back button.png'
 import { useNavigate } from 'react-router-dom';
-import NotesContentMob from '../notesContent-mob/NotesContentMob';
-import '../notes-mob/NotesMob.css'
+import MobileNotesContent from '../mobile-notesContent/MobileNotesContent';
+import '../mobile-Notes/NotesMob.css'
 
 function NotesMob({selected, setSelected, notes, setNotes}){
     const [text, setText]=useState('');
-    const [bgroundColor, setBgroundColor]=useState('#fff');
+    const [bgcolor, setBgcolor]=useState('#fff');
     const [initials,setInitials]=useState('');
     const [selectedTitle,setSelectedTitle]=useState('');
     const navigate=useNavigate();
@@ -42,7 +42,7 @@ function NotesMob({selected, setSelected, notes, setNotes}){
         const groupNames=JSON.parse(localStorage.getItem('groupNames'));
         const selectedGroup=groupNames.find((group)=> group.name===selected);
         if(selectedGroup){
-            setBgroundColor(selectedGroup.color);
+            setBgcolor(selectedGroup.color);
             setInitials(
                 selectedGroup.name
                 .split(' ')
@@ -85,23 +85,23 @@ function NotesMob({selected, setSelected, notes, setNotes}){
     }
 
     return(
-        <div className='mob-notespage-container'>
-            <div className='mob-notespage-title-area'>
+        <div className='mobile-notespage-container'>
+            <div className='mobile-notespage-title-area'>
                 <img src={back} alt='previous' onClick={handleBack}/>
-                <div className='mob-notespage-title-color' style={{backgroundColor:bgroundColor}}>
+                <div className='mobile-notespage-title-color' style={{backgroundColor:bgcolor}}>
                     {initials}    
                 </div>
-                <div className='mob-notespage-title'>
+                <div className='mobile-notespage-title'>
                     {selectedTitle}
                 </div>
             </div>
-            <div className='mob-notespage-content-area'>
+            <div className='mobile-notespage-content-area'>
                 {notes.map((note, index)=>(
-                    <NotesContentMob key={index} note={note}/>
+                    <MobileNotesContent key={index} note={note}/>
                 ))}
             </div>
-            <div className='mob-notespage-input-area'>
-                <textarea id='mob-notespage-textarea' value={text} placeholder='Enter your text here.......' onKeyDown={(e)=>{if(e.key==='Enter'){e.preventDefault(); handleSaveNotes()}}} onChange={(e)=>{setText(e.target.value)}}></textarea>
+            <div className='mobile-notespage-input-area'>
+                <textarea id='mobile-notespage-textarea' value={text} placeholder='Enter your text here.......' onKeyDown={(e)=>{if(e.key==='Enter'){e.preventDefault(); handleSaveNotes()}}} onChange={(e)=>{setText(e.target.value)}}></textarea>
                 <img src={enter} alt='enter-btn' onClick={handleSaveNotes}/>
             </div>
         </div>
