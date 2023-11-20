@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../desktop-Notes/NotesDesktop.css'
 import enter from '../../../images/enter.png'
-import NotesContentDesktop from '../notesContent-pc/NotesContentDesktop';
+import NotesContentDesktop from '../desktop-notesContent/NotesContentDesktop';
 
 function NotesDesktop({notes, setNotes, selected, setSelected}){
     const [text, setText]=useState("");
