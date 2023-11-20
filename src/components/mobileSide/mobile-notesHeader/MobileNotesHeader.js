@@ -33,5 +33,4 @@ function MobileNotesHeader({title, selected, setSelected}){
 
     )
 }
-
 export default MobileNotesHeader;

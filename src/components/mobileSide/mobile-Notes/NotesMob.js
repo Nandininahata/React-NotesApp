@@ -107,5 +107,4 @@ function NotesMob({selected, setSelected, notes, setNotes}){
         </div>
     )
 }
-
 export default NotesMob;

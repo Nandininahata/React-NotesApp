@@ -14,5 +14,4 @@ function MobileNotesContent({note}){
         </div>
     )
 }
-
 export default MobileNotesContent;

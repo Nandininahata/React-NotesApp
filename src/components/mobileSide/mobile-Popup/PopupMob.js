@@ -71,5 +71,4 @@ function PopupMob({
       </div> 
     )
 }
-
 export default PopupMob;
