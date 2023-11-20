@@ -78,5 +78,4 @@ function SidebarDesktop({selected, setSelected}){
         </div>
     );
 }
-
 export default SidebarDesktop;

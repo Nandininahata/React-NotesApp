@@ -109,5 +109,4 @@ function NotesDesktop({notes, setNotes, selected, setSelected}){
         </div>
     )
 }
-
 export default NotesDesktop;

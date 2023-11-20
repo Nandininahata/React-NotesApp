@@ -14,5 +14,4 @@ function NotesContentDesktop({note}){
         </div>
     )
 }
-
 export default NotesContentDesktop;

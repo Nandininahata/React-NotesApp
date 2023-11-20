@@ -17,5 +17,4 @@ function HomeDesktop(){
         </div>
     )
 }
-
 export default HomeDesktop;

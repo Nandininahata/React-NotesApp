@@ -28,5 +28,4 @@ function NotesHeaderDesktop({title, selected, setSelected}){
         </div>
     )
 }
-
 export default NotesHeaderDesktop;
