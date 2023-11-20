@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react'
+import PcView from './view/pcView/PcView';
+import MobView from './view/mobView/MobView';
+import NotesMob from './components/mobileSide/mobile-Notes/NotesMob';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
+  const [windowSize, setWindowSize]=useState(window.innerWidth);
+  const [selected,setSelected]=useState('')
+  const [notes, setNotes]=useState([]);
+
+  const checkWidth=()=>{
+    setWindowSize(window.innerWidth);
+  }
+  window.addEventListener("resize",checkWidth);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {windowSize > 600 ? (<PcView/>) : (
+        <Router>
+          <Routes>
+            <Route path='/' element={<MobView selected={selected} setSelected={setSelected}/>}/>
+            <Route path='/notesPage' element={<NotesMob selected={selected} setSelected={setSelected} notes={notes} setNotes={setNotes}/>}/>
+          </Routes>
+        </Router>
+      )}
     </div>
   );
 }
