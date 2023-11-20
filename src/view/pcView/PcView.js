@@ -19,5 +19,4 @@ function PcView(){
         </div>
     )
 }
-
 export default PcView;

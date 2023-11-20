@@ -79,6 +79,5 @@ function MobView({selected, setSelected}){
             </div>
     )
 }
-
 export default MobView;
 
